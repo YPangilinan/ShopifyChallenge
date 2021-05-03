@@ -1,5 +1,5 @@
 import axios from 'axios';
-const queryURL = "http://www.omdbapi.com/?s=";
+const queryURL = "http://www.omdbapi.com/?t=";
 const APIKEY = "&apikey=aa19abbe";
 
 export default{

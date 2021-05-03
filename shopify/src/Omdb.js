@@ -5,7 +5,7 @@ import Col from "./Col";
 import Card from "./Card";
 import SearchForm from "./Search";
 import MovieDetail from "./MovieDetail";
-import API from "../utils/API";
+import API from "./utils/API";
 
 class Omdb extends Component{
     state = {
@@ -19,15 +19,15 @@ class Omdb extends Component{
 
     searchMovies = query => {
         API.search(query)
-            .then(res => this.setState({results: res.data}))
+            .then(res => this.setState({result: res.data}))
             .catch(err => console.log(err))
     }
 
     handleInputChange = event => {
         const value = event.target.value;
-        const movie = event.target.movie;
+        const name = event.target.name;
         this.setState({
-            [movie]: value
+            [name]: value
         })
     }
 
@@ -37,8 +37,18 @@ class Omdb extends Component{
     }
 
     render(){
-        <Container>
+        return(
+            <Container>
             <Row>
+            <Col size = "md-4">
+                    <Card heading = "Search">
+                        <SearchForm
+                        value = {this.state.search}
+                        handleInputChange = {this.handleInputChange}
+                        handleFormSubmit = {this.handleFormSubmit}
+                        />
+                    </Card>
+                </Col>
                 <Col size = "md-8">
                     <Card
                     heading = {this.state.result.Title || "Search for a Movie"}
@@ -55,17 +65,10 @@ class Omdb extends Component{
 
                     </Card>
                 </Col>
-                <Col size = "md-4">
-                    <Card heading = "Search">
-                        <SearchForm
-                        value = {this.state.search}
-                        handleInputChange = {this.handleInputChange}
-                        handleFormSubmit = {this.handleFormSubmit}
-                        />
-                    </Card>
-                </Col>
             </Row>
         </Container>
+        )
+        
     }
 
 }
