@@ -11,7 +11,7 @@ export default function NominatedPage() {
     
     useEffect(()=> {
         checkNominated();
-    },[nominated])
+    },[])
 
     const checkNominated = () => {
         const nominatedMovies = JSON.parse(localStorage.getItem('nominated-movies'));
