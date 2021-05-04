@@ -9,8 +9,8 @@ import Undo from './components/Undo'
 
 const App = () => {
 	const [movies, setMovies] = useState([]);
-  const [nominated, setNominated] = useState([]);
   const [searchValue, setSearchValue] = useState('');
+  const [nominated, setNominated] = useState([]);
 
   const getMovie = async () =>{
     const url = `http://www.omdbapi.com/?s=${searchValue}&apikey=aa19abbe`;
@@ -22,36 +22,28 @@ const App = () => {
     };
   };
 
-  useEffect(()=>{
-    getMovie(searchValue)
-  },[searchValue]);
-
-  useEffect(()=> {
-    const nominatedMovies = JSON.parse(localStorage.getItem('nominatedMovies'));
-
-    setNominated(nominatedMovies)
-  }, []);
-
-
-  const saveToLocalStorage = items => {
-    localStorage.setItem('nominatedMovies', JSON.stringify(items));
-  }
-
+  
   const addNominated = movie =>{
-    const newNominatedList = [...nominated, movie];
-    setNominated(newNominatedList);
-    saveToLocalStorage(newNominatedList);
+    if (nominated.includes(movie)){
+      alert("Movie has already been nominated. Please select another movie.")
+    }
+    else{
+      const newNominatedList = [...nominated, movie];
+      setNominated(newNominatedList)
+    }
   }
 
   const removeNominated = movie => {
     const newNominatedList = nominated.filter(
-      (nominate) => nominate.i !== movie.i
+      (nominate) => nominate.imdbID !== movie.imdbID
     )
 
     setNominated(newNominatedList)
-    saveToLocalStorage(newNominatedList);
   }
 
+  useEffect(()=>{
+    getMovie(searchValue)
+  },[searchValue]);
 	
 	return (
 		<div className='container-fluid movie-app'>
@@ -66,7 +58,7 @@ const App = () => {
         <Heading heading = 'Nominated' />
       </div>
       <div className = 'row'>
-        <MovieList movies = {nominated} nominateComponent = {Undo} handleNominateClick = {removeNominated} />
+        <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>
       </div>
 		</div>
 	);
