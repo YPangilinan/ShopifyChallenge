@@ -4,6 +4,7 @@ import '../App.css';
 import MovieList from './MovieLIst'
 import Heading from './Heading'
 import Undo from './Undo'
+import Navbar from './Navbar'
 
 export default function NominatedPage() {
     const [nominated, setNominated] = useState([]);
@@ -38,6 +39,8 @@ export default function NominatedPage() {
 
 
     return (
+        <>
+        <Navbar />
     <div className='container-fluid movie-app'>
       <div className = 'row d-flex align-items-center mt-4 mb-4'>
         <Heading heading = 'Nominated' />
@@ -46,5 +49,6 @@ export default function NominatedPage() {
       <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>
       </div>
 		</div>
+        </>
     )
 }

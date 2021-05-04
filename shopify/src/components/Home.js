@@ -1,11 +1,11 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import Navbar from './Navbar'
 
 export default function Home() {
     return (
         <div>
-            <h1> Welcome to the home page</h1>
-            <Link to = '/movies'>Search Movies</Link>
+            <Navbar />
+            <h1>Welcome to the Shoppies</h1>
         </div>
     )
 }

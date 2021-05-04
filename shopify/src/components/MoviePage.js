@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import {Link} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import MovieList from './MovieLIst'
 import Heading from './Heading'
 import Search from './Search'
 import Nominate from './Nominate'
-import Undo from './Undo'
+import Navbar from './Navbar'
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -70,6 +69,8 @@ const MoviePage = () => {
 
 	
 	return (
+        <>
+        <Navbar />
 		<div className='container-fluid movie-app'>
       <div className = 'row d-flex align-items-center mt-4 mb-4'>
         <Heading heading = 'Movies'/>
@@ -78,19 +79,8 @@ const MoviePage = () => {
 			<div className='row'>
         <MovieList movies={movies} nominateComponent = {Nominate} handleNominateClick = {addNominated} />
 			</div>
-      <div className = 'row d-flex align-items-center mt-4 mb-4'>
-        <Heading heading = 'Nominated' />
-      </div>
-      <div className = 'row'>
-      <Link
-                to={{
-                pathname: "/nominated",
-                state: nominated // your data array of objects
-                }}
-            >Nominated Movies</Link>
-        <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>
-      </div>
 		</div>
+        </>
 	);
 };
 
