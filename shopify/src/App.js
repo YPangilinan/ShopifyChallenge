@@ -22,6 +22,17 @@ const App = () => {
     };
   };
 
+  useEffect(()=>{
+    getMovie(searchValue)
+  },[searchValue]);
+
+  useEffect(()=> {
+    const nominatedMovies = JSON.parse(localStorage.getItem('nominatedMovies'));
+
+    setNominated(nominatedMovies)
+  }, []);
+
+
   const saveToLocalStorage = items => {
     localStorage.setItem('nominatedMovies', JSON.stringify(items));
   }
@@ -40,16 +51,6 @@ const App = () => {
     setNominated(newNominatedList)
     saveToLocalStorage(newNominatedList);
   }
-
-  useEffect(()=>{
-    getMovie(searchValue)
-  },[searchValue]);
-
-  useEffect(()=> {
-    const nominatedMovies = JSON.parse(localStorage.getItem('nominatedMovies'));
-
-    setNominated(nominatedMovies)
-  }, []);
 
 	
 	return (
