@@ -8,7 +8,12 @@ const MovieList = props => {
         <>
         {props.movies.map((movie, i)=> (
             <div className = "image-container d-flex justify-content-start m-3" key = {i}>
+                <figure className = "figure">
                 <img src= {movie.Poster} alt = 'movie'></img>
+                <figcaption className = "figure-caption">
+                    {movie.Title}({movie.Year})
+                </figcaption>
+                </figure>
                 <div 
                     onClick = {() => props.handleNominateClick(movie)}
                     className = 'overlay d-flex align-items-center justify-content-center'>
