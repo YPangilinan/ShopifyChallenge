@@ -9,6 +9,8 @@ import {
   MDBContainer
 } from 'mdbreact';
 import './Home.css';
+import Background from '../images/theatre.png'
+import Shoppies from '../images/TheShoppies.png'
 
 class Home extends React.Component {
     state = {
@@ -27,24 +29,21 @@ class Home extends React.Component {
      
     }
   
-  
     render() {
     
       return (
         <div id='minimalistintro'>
-          <MDBView src='https://mdbcdn.b-cdn.net/img/Photos/Others/img%20%2848%29.jpg'>
+          <MDBView src={Background}>
             <MDBMask className='rgba-black-light' />
             <MDBContainer
               className='d-flex justify-content-center align-items-center'
-              style={{ height: '100%', width: '100%', paddingTop: '17rem' }}
+              style={{ height: '100%', width: '100%', paddingTop: '7rem' }}
             >
               <MDBRow>
                 <MDBCol md='12' className='mb-4 white-text text-center'>
-                  <h1 className='h1-reponsive white-text text-uppercase font-weight-bold mb-0 pt-md-5 pt-5 '>
-                    The Shoppies
-                  </h1>
-                  <hr className='hr-light my-4' />
-                  <h5 className='text-uppercase mb-4 white-text '>
+                    <img src = {Shoppies} alt = 'logo' height = '400px' width = '400px'/>
+                  <hr className='hr-light my-2' />
+                  <h5 className='text-uppercase mt-3 mb-4 white-text '>
                     <strong>Movie Awards for Entrepreneurs</strong>
                   </h5>
                   <Link to = "/movies">

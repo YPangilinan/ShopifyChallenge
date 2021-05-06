@@ -123,7 +123,6 @@ const MoviePage = () => {
 		<div className='container-fluid movie-app'>
         <ToastContainer />
       <div className = 'row d-flex align-items-center mt-4 mb-4'>
-        <Heading heading = 'Movies'/>
         <Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
       </div>
 			<div className='row'>
