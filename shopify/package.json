@@ -9,12 +9,19 @@
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
     "mdb-react-ui-kit": "^1.0.0-beta4",
-    "mdbreact": "git+https://oauth2:zLX9CPbED7f1s4ygQHFy@git.mdbootstrap.com/mdb/react/re-pro.git",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "mdbreact": "git+https://oauth2:LY9BjXAs7y6BxrMhSaSC@git.mdbootstrap.com/mdb/react/re-pro.git",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-toastify": "^7.0.4",
     "web-vitals": "^1.1.1"
+  },
+  "peerDependencies": {
+    "react": "17.0.1",
+    "mdbreact": "git+https://oauth2:LY9BjXAs7y6BxrMhSaSC@git.mdbootstrap.com/mdb/react/re-pro.git"
+  },
+  "resolutions": {
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -25,8 +32,13 @@
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
-    ]
+      "react-app/jest",
+      "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
   },
   "browserslist": {
     "production": [
@@ -39,5 +51,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@types/react-dom": "17.0.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "jquery": "^3.6.0",
+    "react": "17.0.1",
+    "react-dom": "17.0.1"
   }
 }
