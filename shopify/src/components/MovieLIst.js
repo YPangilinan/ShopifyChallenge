@@ -44,7 +44,8 @@ const MovieList = props => {
                       <MDBIcon/> <NominateComponent />
                     </MDBBtn>             
                   </div>
-            </MDBCol> 
+            </MDBCol>
+            
         ))}
         </MDBRow>
         </>
