@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import '../App.css';
 import MovieList from './MovieLIst'
-import Heading from './Heading'
 import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
@@ -122,7 +121,7 @@ const MoviePage = () => {
         <Navbar />
 		<div className='container-fluid movie-app'>
         <ToastContainer />
-      <div className = 'row d-flex align-items-center mt-4 mb-4'>
+      <div className = 'row d-flex align-items-center mt-5 mb-4 my-5 px-5'>
         <Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
       </div>
 			<div className='row'>
