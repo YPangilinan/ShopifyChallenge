@@ -2,13 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
-import '../App.css';
+import './Moviepage.css';
 import MovieList from './MovieLIst'
 import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
-import Undo from './Undo'
-import AlreadyNom from './AlreadyNom'
+
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -123,8 +122,10 @@ const MoviePage = () => {
 		<div className='container-fluid movie-app'>
         <ToastContainer />
       <div className = 'row d-flex align-items-center mt-5 mb-4 my-5 px-5'>
+          <div className = "col-lg-2"></div>
         <Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
-      </div>
+        <div className = "col-lg-2"></div>
+        </div>
 			<div className='row'>
                 
         <MovieList movies={movies} 

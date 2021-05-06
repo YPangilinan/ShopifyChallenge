@@ -3,7 +3,7 @@ import React from 'react';
 const Undo = () => {
     return(
         <>
-        <span className = 'mr-2'>Remove from Nominations</span>
+        <span className = 'mr-2'>Remove</span>
         <svg
 				width='1em'
 				height='1em'

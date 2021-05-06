@@ -1,15 +1,6 @@
-.image-container{
-  position: relative;
-  transition: transform 0.2s;
-}
-
-.image-container:hover{
-  cursor: pointer;
-  transform: scale(1.1);
-}
-
-.image-container:hover .overlay{
-  opacity: 1;
+body {
+	background:black;
+	color: #ffffff;
 }
 
 .overlay{
@@ -23,3 +14,18 @@
   padding: 20px;
   text-align: center;
 }
+
+.nom{
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.button:hover{
+  transform: scale(0.5);
+}
+
+.nom:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+

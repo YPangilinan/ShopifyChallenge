@@ -43,7 +43,6 @@ export default function NominatedPage() {
         <Navbar />
     <div className='container-fluid movie-app'>
       <div className = 'row d-flex align-items-center mt-4 mb-4'>
-        <Heading heading = 'Nominated' />
       </div>
       <div className = 'row'>
       <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>

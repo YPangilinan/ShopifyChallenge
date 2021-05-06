@@ -2,7 +2,7 @@ import React from 'react';
 
 const Search = props => {
     return(
-        <div className = 'col col-sm-8'>
+        <div className = "col col-lg-8 mt-2">
             <input
                 className = 'form-control p-4'
                 value = {props.value}
