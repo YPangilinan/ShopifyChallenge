@@ -8,6 +8,7 @@ import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
 import Undo from './Undo'
+import AlreadyNom from './AlreadyNom'
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);

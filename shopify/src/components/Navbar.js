@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBRow, MDBContainer, MDBCol
+MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBRow, MDBContainer, MDBCol
 } from "mdbreact";
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import shoppies from '../images/TheShoppies.png';
+import './Navbar.css'
 
 class Navbar extends Component {
 state = {
@@ -14,9 +15,25 @@ toggleCollapse = () => {
   this.setState({ isOpen: !this.state.isOpen });
 }
 
+componentDidMount(){
+    window.addEventListener("scroll", this.handleScroll);
+}
+
+componentWillUnmount(){
+    window.removeEventListener("scroll", this.handleScroll);
+}
+
+handleScroll = () => {
+    if(window.scrollY > 20){
+        document.querySelector("img").className = "img scroll"
+    }
+    else{
+        document.querySelector("img").className = "img"
+    }
+}
+
 render() {
   return (
-    <Router>
       <MDBNavbar color="black" dark expand="md">
       <MDBContainer
               className='d-flex justify-content-center align-items-center'
@@ -24,26 +41,22 @@ render() {
             >
           <MDBRow>
           <MDBCol md='12' className='mb-4 white-text text-center'>
-                    <img src = {shoppies} alt = 'logo' height = '350px' width = '350px'/>
+                  <Link to = "/"> <img src = {shoppies} alt = 'logo' height = "350px" width = "350px" /></Link> 
                   <MDBNavbarToggler onClick={this.toggleCollapse} />
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-            <MDBNavbarNav left>
-            <MDBNavItem active>
-              <MDBNavLink to="/">Home</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/movies">Search Movies</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink to="/nominated">Nominated Movies</MDBNavLink>
-            </MDBNavItem>
+            <MDBNavbarNav className = "mt-3">
+            <Link to = "/movies" style={{color: 'white'}} className = "mr-3">
+                 SEARCH MOVIES
+                  </Link>
+                  <Link to = "/nominated" style={{color: 'white'}} className = "ml-3">
+                 NOMINATED MOVIES
+                  </Link>
           </MDBNavbarNav>
              </MDBCollapse>
             </MDBCol>
           </MDBRow>
         </MDBContainer>
       </MDBNavbar>
-    </Router>
     );
   }
 }
