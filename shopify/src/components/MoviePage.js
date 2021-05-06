@@ -8,6 +8,7 @@ import Heading from './Heading'
 import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
+import Undo from './Undo'
 
 const MoviePage = () => {
     const [movies, setMovies] = useState([]);
@@ -107,8 +108,15 @@ const MoviePage = () => {
       addedNom()
     }
   }
+  const removeNominated = movie => {
+    const newNominatedList = nominated.filter(
+      (nominate) => nominate.imdbID !== movie.imdbID
+    )
 
-	
+    setNominated(newNominatedList)
+    saveToLocalStorage(newNominatedList)
+  }
+
 	return (
         <>
         <Navbar />
@@ -119,7 +127,12 @@ const MoviePage = () => {
         <Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
       </div>
 			<div className='row'>
-        <MovieList movies={movies} nominateComponent = {Nominate} handleNominateClick = {addNominated} />
+                
+        <MovieList movies={movies} 
+                nominateComponent = {Nominate} 
+                nominated = {nominated} 
+                nominatedMovies = {localStorage.getItem('nominated-movies')}
+                handleNominateClick = {addNominated} />
 			</div>
 		</div>
         </>

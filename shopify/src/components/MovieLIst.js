@@ -1,10 +1,14 @@
 import React from 'react';
 import { MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
+import Nominate from './Nominate';
+import Undo from './Undo';
 
 const MovieList = props => {
 
-    const NominateComponent = props.nominateComponent; 
-
+    const NominateComponent = props.nominateComponent;
+    const nominated = props.nominated;
+    const nominatedMovies = props.nominatedMovies;
+  
     return(
         <>
         <MDBRow className = "ml-1 mr-1 mb-2">
@@ -29,8 +33,11 @@ const MovieList = props => {
                     <p>
                       {movie.Year}
                     </p>
-                    <MDBBtn color='pink'>
-                      <MDBIcon icon='clone left' /> View project
+                    <MDBBtn 
+                    color='pink'
+                    onClick = {() => props.handleNominateClick(movie)}
+                    >
+                      <MDBIcon icon='clone left' /> <NominateComponent />
                     </MDBBtn>
                   </div>
                 </div>
