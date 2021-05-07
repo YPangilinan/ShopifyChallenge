@@ -90,7 +90,7 @@ const MoviePage = () => {
         progress: undefined,
         });
   }
-
+//nom check function causing errors on movie page
   const nomCheck = (movie) => {
     const nominatedMovies = localStorage.getItem('nominated-movies');
     if(!nominatedMovies){
@@ -98,12 +98,11 @@ const MoviePage = () => {
       setNominated(newNominatedList)
       saveToLocalStorage(newNominatedList)
       addedNom()
-    }
-      else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
+    } else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
           fiveNom()
-      } else if (nominated.includes(movie) || nominatedMovies.includes(movie.imdbID)){
+    } else if (nominated.includes(movie) || nominatedMovies.includes(movie.imdbID)){
         alreadyNom()
-      } else{
+    } else{
         const newNominatedList = [...nominated, movie];
         setNominated(newNominatedList)
         saveToLocalStorage(newNominatedList)

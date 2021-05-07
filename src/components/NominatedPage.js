@@ -50,13 +50,11 @@ export default function NominatedPage() {
         <>
         <Navbar />
     <div className='container-fluid movie-app mx-3'>
+    {BreadcrumbPage()}
       <div className = 'row d-flex align-items-center mb-3'> 
-      <div className = 'col-md-12 mb-4 white-text'>
-                    {BreadcrumbPage()}
                   <h2 className='text-uppercase ml-3 mt-3  white-text' style = {{letterSpacing: '2.5px'}}>
                     <strong>Nominated</strong>
                   </h2>
-    </div> 
       </div>
       <div className = 'row'>
       <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>
