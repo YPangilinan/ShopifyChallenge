@@ -98,7 +98,7 @@ const MoviePage = () => {
       setNominated(newNominatedList)
       saveToLocalStorage(newNominatedList)
       addedNom()
-    } else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
+    } else if(nominated.length === 5 ||nominatedMovies.length === 5){
           fiveNom()
     } else if (nominated.includes(movie) || nominatedMovies.includes(movie.imdbID)){
         alreadyNom()

@@ -12,7 +12,7 @@ const MovieList = props => {
         <>
         <MDBRow className = "ml-1 mr-1 mb-2">
         {props.movies.map((movie, i)=> (
-            <MDBCol md='3'className = "nom">
+            <MDBCol className = "nom">
               <MDBCard
                 className='card-image mb-3'
                 key = {i}
