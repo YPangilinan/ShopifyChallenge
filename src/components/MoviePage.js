@@ -8,6 +8,7 @@ import MovieList from './MovieLIst'
 import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
+import { COMPLETIONSTATEMENT_TYPES } from '@babel/types';
 
 
 const MoviePage = () => {
@@ -92,7 +93,10 @@ const MoviePage = () => {
 
   const numberCheck = () => {
     const nominatedMovies = localStorage.getItem('nominated-movies');
-      if(nominated.length === 4 ||nominatedMovies.length === 4 ){
+    if(!nominatedMovies){
+      console.log('still nothing nominated')
+    }
+      else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
           fiveNom()
           return false
       } else{
