@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './Moviepage.css';
@@ -31,6 +32,16 @@ const MoviePage = () => {
   useEffect(()=>{
       checkNominated();
   }, [])
+
+  const BreadcrumbPage = () => {
+    return (
+        <MDBBreadcrumb style = {{background: 'transparent'}}>
+          <MDBBreadcrumbItem>Home</MDBBreadcrumbItem>
+          <MDBBreadcrumbItem active>Movies</MDBBreadcrumbItem>
+          <MDBBreadcrumbItem >Nominated</MDBBreadcrumbItem>
+        </MDBBreadcrumb>
+    );
+  };
 
   const checkNominated = () =>{
     const nominatedMovies = JSON.parse(localStorage.getItem('nominated-movies'));
@@ -107,16 +118,18 @@ const MoviePage = () => {
       addedNom()
     }
   }
-  
+
 	return (
         <>
         <Navbar />
-		<div className='container-fluid movie-app'>
+		<div className='container-fluid movie-app mx-3'>
         <ToastContainer />
-      <div className = 'row d-flex align-items-center mt-5 mb-4 my-5 px-5'>
-          <div className = "col-lg-2"></div>
-        <Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
-        <div className = "col-lg-2"></div>
+        {BreadcrumbPage()}
+      <div className = 'row d-flex align-items-center mb-3 ml-2'>
+                  <h2 className='text-uppercase ml-3 mt-3  white-text' style = {{letterSpacing: '2.5px'}}>
+                    <strong>Search</strong>
+                  </h2><Search searchValue = {searchValue} setSearchValue = {setSearchValue} />
+   
         </div>
 			<div className='row'>
                 

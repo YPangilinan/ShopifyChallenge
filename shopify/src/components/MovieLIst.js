@@ -1,8 +1,7 @@
 import React from 'react';
 import { MDBCard, MDBCardTitle, MDBBtn, MDBRow, MDBCol, MDBIcon } from 'mdbreact';
 import '../App.css'
-import Nominate from './Nominate';
-import Undo from './Undo';
+import NoPoster from '../images/NOPOSTER.png'
 
 
 const MovieList = props => {
@@ -10,6 +9,7 @@ const MovieList = props => {
     const NominateComponent = props.nominateComponent;
     const nominated = props.nominated;
     const nominatedMovies = props.nominatedMovies;
+
   
     return(
         <>
@@ -20,8 +20,8 @@ const MovieList = props => {
                 className='card-image mb-3'
                 key = {i}
                 style={{
-                  backgroundImage:
-                    `url(${movie.Poster}})`,
+                  backgroundImage: movie.Poster.startsWith("http") ?
+                    `url(${movie.Poster}})` : `url(${NoPoster})` ,
                     height: '500px',
                     width: '300px'
                 }}
