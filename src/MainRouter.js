@@ -7,9 +7,9 @@ import NominatedPage from './components/NominatedPage'
 const MainRouter = () => (
     <div>
         <Switch>
-            <Route exact path = "/" component = {Home}></Route>
-            <Route exact path = "/movies" component = {MoviePage}></Route>
-            <Route exact path = "/nominated" component = {NominatedPage}></Route>
+            <Route exact path = "/ShopifyChallenge" component = {Home}></Route>
+            <Route exact path = "/ShopifyChallenge/movies" component = {MoviePage}></Route>
+            <Route exact path = "/ShopifyChallenge/nominated" component = {NominatedPage}></Route>
         </Switch>
     </div>
 )

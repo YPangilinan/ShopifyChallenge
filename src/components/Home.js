@@ -46,12 +46,12 @@ class Home extends React.Component {
                   <h5 className='text-uppercase mt-3 mb-4 white-text '>
                     <strong>Movie Awards for Entrepreneurs</strong>
                   </h5>
-                  <Link to = "/movies">
+                  <Link to = "/ShopifyChallenge/movies">
                   <MDBBtn outline color='white'>
                     Search Movies
                   </MDBBtn>
                   </Link>
-                  <Link to ="/nominated">
+                  <Link to ="/ShopifyChallenge/nominated">
                   <MDBBtn outline color='white'>
                     Nominated Movies
                   </MDBBtn>

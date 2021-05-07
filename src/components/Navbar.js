@@ -41,14 +41,14 @@ render() {
             >
           <MDBRow>
           <MDBCol md='12' className='mb-4 white-text text-center'>
-                  <Link to = "/"> <img src = {shoppies} alt = 'logo' height = "350px" width = "350px" /></Link> 
+                  <Link to = "/ShopifyChallenge"> <img src = {shoppies} alt = 'logo' height = "350px" width = "350px" /></Link> 
                   <MDBNavbarToggler onClick={this.toggleCollapse} />
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
             <MDBNavbarNav className = "mt-3">
-            <Link to = "/movies" style={{color: 'white'}} className = "mr-3">
+            <Link to = "/ShopifyChallenge/movies" style={{color: 'white'}} className = "mr-3">
                  SEARCH MOVIES
                   </Link>
-                  <Link to = "/nominated" style={{color: 'white'}} className = "ml-3">
+                  <Link to = "/ShopifyChallenge/nominated" style={{color: 'white'}} className = "ml-3">
                  NOMINATED MOVIES
                   </Link>
           </MDBNavbarNav>
