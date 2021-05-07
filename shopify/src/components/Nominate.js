@@ -3,7 +3,7 @@ import React from 'react';
 const Nominate = () => {
     return(
         <>
-        <span className = 'mr-2'>Nominate</span>
+        <span className = 'button mr-2'>Nominate</span>
         <svg
 				width='1em'
 				height='1em'

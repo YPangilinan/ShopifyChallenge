@@ -7,9 +7,6 @@ import NoPoster from '../images/NOPOSTER.png'
 const MovieList = props => {
 
     const NominateComponent = props.nominateComponent;
-    const nominated = props.nominated;
-    const nominatedMovies = props.nominatedMovies;
-
   
     return(
         <>

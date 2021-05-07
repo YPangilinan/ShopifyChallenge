@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
-import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
+import { MDBBreadcrumb, MDBBreadcrumbItem } from "mdbreact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-toastify/dist/ReactToastify.css';
 import './Moviepage.css';
@@ -135,7 +135,6 @@ const MoviePage = () => {
                 
         <MovieList movies={movies} 
                 nominateComponent = {Nominate} 
-                nominated = {nominated} 
                 nominatedMovies = {localStorage.getItem('nominated-movies')}
                 handleNominateClick = {addNominated} />
 			</div>

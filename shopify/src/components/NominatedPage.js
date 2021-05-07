@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
+import { MDBBreadcrumb, MDBBreadcrumbItem } from "mdbreact";
 import '../App.css';
 import MovieList from './MovieLIst'
-import Heading from './Heading'
 import Undo from './Undo'
 import Navbar from './Navbar'
 
