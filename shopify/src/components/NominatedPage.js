@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css';
 import MovieList from './MovieLIst'
 import Heading from './Heading'
@@ -42,7 +41,7 @@ export default function NominatedPage() {
         <>
         <Navbar />
     <div className='container-fluid movie-app'>
-      <div className = 'row d-flex align-items-center mt-4 mb-4'>
+      <div className = 'row d-flex align-items-center mt-4 mb-4'>  
       </div>
       <div className = 'row'>
       <MovieList movies = {nominated} handleNominateClick = {removeNominated}  nominateComponent = {Undo}/>

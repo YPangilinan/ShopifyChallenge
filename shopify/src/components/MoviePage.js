@@ -107,15 +107,7 @@ const MoviePage = () => {
       addedNom()
     }
   }
-  const removeNominated = movie => {
-    const newNominatedList = nominated.filter(
-      (nominate) => nominate.imdbID !== movie.imdbID
-    )
-
-    setNominated(newNominatedList)
-    saveToLocalStorage(newNominatedList)
-  }
-
+  
 	return (
         <>
         <Navbar />

@@ -1,6 +1,10 @@
 body {
-	background:black;
+	background-color:black;
 	color: #ffffff;
+}
+
+.container{
+  background-color: black;
 }
 
 .overlay{
