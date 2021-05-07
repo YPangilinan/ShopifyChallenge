@@ -7,7 +7,7 @@ The Shoppies is a webpage that can search OMDB for movies, allow the user to sav
 Users can save their nomination lists if they leave the page. Once they return, they can pick up where they left off without having to select new movies!
 
 ### See it in Action!
-*The Shoppies* is deployed to Github Pages. Click [here](https://ypangilinan.github.io/ShopifyChallenge) to view it! Or refer to the Gifs below.
+*The Shoppies* is deployed to Github Pages. Click [here](https://ypangilinan.github.io/ShopifyChallenge) to view it!
 
 ### How was this app created?
 The specific technologies used to create this app are:
