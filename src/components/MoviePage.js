@@ -94,7 +94,10 @@ const MoviePage = () => {
   const nomCheck = (movie) => {
     const nominatedMovies = localStorage.getItem('nominated-movies');
     if(!nominatedMovies){
-      console.log('still nothing nominated')
+      const newNominatedList = [...nominated, movie];
+      setNominated(newNominatedList)
+      saveToLocalStorage(newNominatedList)
+      addedNom()
     }
       else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
           fiveNom()
@@ -104,7 +107,7 @@ const MoviePage = () => {
         const newNominatedList = [...nominated, movie];
         setNominated(newNominatedList)
         saveToLocalStorage(newNominatedList)
-       addedNom()
+        addedNom()
       }
   }
 
