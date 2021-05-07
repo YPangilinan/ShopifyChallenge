@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ShopifyChallenge/static/css/main.183638c7.chunk.css",
-    "main.js": "/ShopifyChallenge/static/js/main.751e2812.chunk.js",
-    "main.js.map": "/ShopifyChallenge/static/js/main.751e2812.chunk.js.map",
+    "main.js": "/ShopifyChallenge/static/js/main.d12e77e2.chunk.js",
+    "main.js.map": "/ShopifyChallenge/static/js/main.d12e77e2.chunk.js.map",
     "runtime-main.js": "/ShopifyChallenge/static/js/runtime-main.e7ea3ce8.js",
     "runtime-main.js.map": "/ShopifyChallenge/static/js/runtime-main.e7ea3ce8.js.map",
     "static/css/2.299c55c4.chunk.css": "/ShopifyChallenge/static/css/2.299c55c4.chunk.css",
-    "static/js/2.c9bb524d.chunk.js": "/ShopifyChallenge/static/js/2.c9bb524d.chunk.js",
-    "static/js/2.c9bb524d.chunk.js.map": "/ShopifyChallenge/static/js/2.c9bb524d.chunk.js.map",
+    "static/js/2.6ebe992e.chunk.js": "/ShopifyChallenge/static/js/2.6ebe992e.chunk.js",
+    "static/js/2.6ebe992e.chunk.js.map": "/ShopifyChallenge/static/js/2.6ebe992e.chunk.js.map",
     "index.html": "/ShopifyChallenge/index.html",
     "static/css/2.299c55c4.chunk.css.map": "/ShopifyChallenge/static/css/2.299c55c4.chunk.css.map",
     "static/css/main.183638c7.chunk.css.map": "/ShopifyChallenge/static/css/main.183638c7.chunk.css.map",
-    "static/js/2.c9bb524d.chunk.js.LICENSE.txt": "/ShopifyChallenge/static/js/2.c9bb524d.chunk.js.LICENSE.txt",
+    "static/js/2.6ebe992e.chunk.js.LICENSE.txt": "/ShopifyChallenge/static/js/2.6ebe992e.chunk.js.LICENSE.txt",
     "static/media/NOPOSTER.0a80f4d5.png": "/ShopifyChallenge/static/media/NOPOSTER.0a80f4d5.png",
     "static/media/TheShoppies.cdf29b5c.png": "/ShopifyChallenge/static/media/TheShoppies.cdf29b5c.png",
     "static/media/mdb.css": "/ShopifyChallenge/static/media/default-skin.f64c3af3.svg",
@@ -21,8 +21,8 @@
   "entrypoints": [
     "static/js/runtime-main.e7ea3ce8.js",
     "static/css/2.299c55c4.chunk.css",
-    "static/js/2.c9bb524d.chunk.js",
+    "static/js/2.6ebe992e.chunk.js",
     "static/css/main.183638c7.chunk.css",
-    "static/js/main.751e2812.chunk.js"
+    "static/js/main.d12e77e2.chunk.js"
   ]
 }
