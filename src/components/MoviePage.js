@@ -8,7 +8,7 @@ import MovieList from './MovieLIst'
 import Search from './Search'
 import Nominate from './Nominate'
 import Navbar from './Navbar'
-import { COMPLETIONSTATEMENT_TYPES } from '@babel/types';
+import { COMPLETIONSTATEMENT_TYPES, exportDefaultSpecifier } from '@babel/types';
 
 
 const MoviePage = () => {
@@ -91,16 +91,20 @@ const MoviePage = () => {
         });
   }
 
-  const numberCheck = () => {
+  const nomCheck = (movie) => {
     const nominatedMovies = localStorage.getItem('nominated-movies');
     if(!nominatedMovies){
       console.log('still nothing nominated')
     }
       else if(nominated.length === 4 ||nominatedMovies.length === 4 ){
           fiveNom()
-          return false
+      } else if (nominated.includes(movie) || nominatedMovies.includes(movie.imdbID)){
+        alreadyNom()
       } else{
-         return true
+        const newNominatedList = [...nominated, movie];
+        setNominated(newNominatedList)
+        saveToLocalStorage(newNominatedList)
+       addedNom()
       }
   }
 
@@ -109,18 +113,7 @@ const MoviePage = () => {
   }
   
   const addNominated = movie =>{
-    const nominatedMovies = localStorage.getItem('nominated-movies');
-
-    numberCheck()
-    if (nominated.includes(movie) || nominatedMovies.includes(movie.imdbID)){
-      alreadyNom()
-    }
-    else{
-      const newNominatedList = [...nominated, movie];
-      setNominated(newNominatedList)
-      saveToLocalStorage(newNominatedList)
-      addedNom()
-    }
+    nomCheck(movie)
   }
 
 	return (
