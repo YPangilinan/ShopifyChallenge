@@ -37,7 +37,7 @@ class Home extends React.Component {
             <MDBMask className='rgba-black-light' />
             <MDBContainer
               className='d-flex justify-content-center align-items-center'
-              style={{ height: '100%', width: '100%', paddingTop: '7rem' }}
+              style={{ height: '100%', width: '100%', paddingTop: '7rem', background: 'transparent' }}
             >
               <MDBRow>
                 <MDBCol md='12' className='mb-4 white-text text-center'>
